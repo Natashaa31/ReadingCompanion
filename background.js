@@ -1,7 +1,7 @@
 // AI Reading Companion - Background Service Worker
 // Handles all API calls and data persistence.
 
-const API_TOKEN = "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"; 
+const API_TOKEN = "PASTE_YOUR_HUGGING_FACE_TOKEN_HERE";
 
 const SUMMARIZE_API_URL = "https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6";
 const CUSTOM_PROMPT_API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-small";
