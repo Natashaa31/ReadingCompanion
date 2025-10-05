@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Reading Companion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">AI Reading Companion</h1>
+
+        <div class="tab-container">
+            <button class="tab-button active" data-tab="summarizer">Summarizer</button>
+            <button class="tab-button" data-tab="history">History</button>
+        </div>
+
+        <!-- Summarizer Tab Content -->
+        <div id="summarizer" class="tab-content active">
+            <div class="input-group">
+                <label for="customPrompt" class="prompt-label">Custom Instruction</label>
+                <textarea id="customPrompt" class="prompt-textarea" placeholder="e.g., Explain this to a 5th grader..."></textarea>
+            </div>
+            
+            <button id="summarizeBtn" class="action-button">Summarize Page</button>
+            
+            <hr class="separator">
+
+            <div class="output-group">
+                <h2 class="section-title">Summary:</h2>
+                <div id="summaryResult" class="result-box">Click the button to get a summary...</div>
+            </div>
+            
+            <div id="translate-container" class="translate-section" style="display: none;">
+                <h2 class="section-title">Translate Summary</h2>
+                <div class="translate-controls">
+                    <select id="language-select" class="language-dropdown">
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ja">Japanese</option>
+                    </select>
+                    <button id="translateBtn" class="action-button translate-button">Translate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Tab Content -->
+        <div id="history" class="tab-content">
+            <div class="history-header">
+                <h2 class="section-title">Saved Summaries</h2>
+                <button id="clearHistoryBtn" class="clear-button">Clear All</button>
+            </div>
+            <div id="historyList" class="history-list">
+                <!-- History items will be loaded here -->
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
+
